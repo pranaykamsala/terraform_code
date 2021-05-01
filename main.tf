@@ -21,6 +21,7 @@ resource "aws_vpc" "default" {
 	tags = {
         Name = "${var.IGW_name}"
     }
+}
     
 resource "aws_subnet" "subnet1-public" {
     vpc_id = "${aws_vpc.default.id}"
